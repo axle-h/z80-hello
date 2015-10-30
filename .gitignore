@@ -74,3 +74,15 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# sdcc assembly files
+*.asm
+*.rel
+*.bin
+*.ihx
+*.lk
+*.lst
+*.map
+*.noi
+*.sym
+
