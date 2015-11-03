@@ -1,8 +1,8 @@
 all: hello
 
 hello: putchar.rel crt0.rel
-	sdcc -mz80 --code-loc 0x0100 --data-loc 0 --no-std-crt0 crt0.rel putchar.rel hello.c
-	makebin -p hello.ihx hello.bin
+	sdcc -V -mz80 --std-sdcc99 --code-loc 0x100 --no-std-crt0 --portmode=z80 crt0.rel putchar.rel hello.c
+	makebin -p -s 65536 hello.ihx hello.bin
 
 putchar.rel:
 	sdasz80 -o putchar.s
